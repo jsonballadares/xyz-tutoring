@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">XYZ Tutoring</string>
+    <string name="checkbox">com.example.jason.tutorapplication.checkbox</string>
+    <string name="name">com.example.jason.tutorapplication.name</string>
+    <string name="password">com.example.jason.tutorapplication.password</string>
+
+</resources>
