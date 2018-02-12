@@ -69,18 +69,6 @@ public class LogInScreen extends AppCompatActivity {
                 }else{
                     buttonLogIn();
 
-                    //set a checkbox when the application starts
-                    //mEditor.putString(getString(R.string.checkbox), "False");
-
-                   // mEditor.commit();
-
-                    //save the name
-                   // mEditor.putString(getString(R.string.name), "");
-                   // mEditor.commit();
-
-                    //save the password
-                  //  mEditor.putString(getString(R.string.password), "");
-                  //  mEditor.commit();
                 }
             }
         });
@@ -129,6 +117,14 @@ public class LogInScreen extends AppCompatActivity {
             mName.setText("");
             mPassword.setText("");
         }
+
+    }
+
+    public void OnClickRegister(View view){
+
+        Intent intent = new Intent(LogInScreen.this, RegistrationActivity.class);
+        startActivity(intent);
+
 
     }
 
