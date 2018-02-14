@@ -8,47 +8,37 @@
     tools:context="com.example.jason.tutorapplication.RegistrationActivity"
     tools:layout_editor_absoluteY="25dp">
 
-    <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="25dp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@+id/editText6"
-        app:layout_constraintStart_toStartOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/editText6">
-
-    </RadioGroup>
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="84dp"
         android:background="#11000000"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
         android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="#11000000"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -57,14 +47,15 @@
         android:id="@+id/editText3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
         android:background="#11000000"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
         android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
@@ -73,15 +64,16 @@
         android:id="@+id/editText4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+
+        android:layout_marginBottom="23dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-
-        android:layout_marginTop="21dp"
         android:background="#11000000"
         android:ems="10"
         android:hint="Address"
         android:inputType="textPersonName"
         android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
@@ -90,14 +82,15 @@
         android:id="@+id/editText5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
         android:background="#11000000"
         android:ems="10"
         android:hint="Phone"
         android:inputType="textPersonName"
         android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
@@ -106,63 +99,24 @@
         android:id="@+id/editText6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="23dp"
         android:background="#11000000"
         android:ems="10"
         android:hint="Child's Name"
         android:inputType="textPersonName"
         android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
-    <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="8dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <RadioButton
-            android:id="@+id/radioButton0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="1st Grade" />
-
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="2nd Grade" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="3rd Grade" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="4th Grade" />
-
-    </RadioGroup>
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="190dp"
-        android:layout_height="0dp"
+        android:layout_height="90dp"
         android:layout_marginTop="2dp"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -170,79 +124,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo2" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="29dp"
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.jason.tutorapplication.grade_choose"
+        android:layout_width="399dp"
+        android:layout_height="199dp"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup2">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText6" />
 
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="5th Grade" />
 
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="6th Grade" />
-
-        <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="7th Grade" />
-
-        <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="8th Grade" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <RadioButton
-            android:id="@+id/radioButton14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="9th Grade" />
-
-        <RadioButton
-            android:id="@+id/radioButton11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="10th Grade" />
-
-        <RadioButton
-            android:id="@+id/radioButton12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="11th Grade" />
-
-        <RadioButton
-            android:id="@+id/radioButton13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="12th Grade" />
-    </RadioGroup>
 </android.support.constraint.ConstraintLayout>
