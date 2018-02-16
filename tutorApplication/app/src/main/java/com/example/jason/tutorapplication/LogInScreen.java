@@ -30,10 +30,10 @@ public class LogInScreen extends AppCompatActivity {
         setContentView(R.layout.activity_log_in_screen);
 
         //connects the fields with actual gui IDs
-        mName = findViewById(R.id.editTextUserName);
-        mPassword = findViewById(R.id.editTextPassword);
-        btnLogin = findViewById(R.id.buttonLogin);
-        mCheckBox = findViewById(R.id.checkbox);
+        mName = findViewById(R.id.etUserName);
+        mPassword = findViewById(R.id.etPassword);
+        btnLogin = findViewById(R.id.btLogIn);
+        mCheckBox = findViewById(R.id.cbRemember);
 
         //make a shared preferences with the default file (strings.xml)
         mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
