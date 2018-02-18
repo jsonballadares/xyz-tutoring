@@ -21,6 +21,7 @@ public class MainMenu extends AppCompatActivity {
 
         Intent intentData = getIntent();
         String email = intentData.getStringExtra("email");
+
         //mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         //editor = mPreferences.edit();
 

@@ -5,13 +5,14 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    private SharedPreferences mPreferences;
-    private SharedPreferences.Editor mEditor;
+    private SharedPreferences regPreferences;
+    private SharedPreferences.Editor regEditor;
 
     private EditText etPassword;
     private EditText etEmail;
@@ -35,49 +36,49 @@ public class RegistrationActivity extends AppCompatActivity {
         etChildsGrade = findViewById(R.id.etSubject);
         etChildSubject = findViewById(R.id.etSubject);
 
-        mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        mEditor = mPreferences.edit();
+        regPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        regEditor = regPreferences.edit();
 
     }
 
-    public void onSubmitButtonClick(){
+    public void onSubmitButtonClick(View view){
 
         //todo add string xml values for this one
 
         //save the name
         String email = etEmail.getText().toString();
-        mEditor.putString(getString(R.string.email), email);
-        mEditor.commit();
+        regEditor.putString(getString(R.string.email), email);
+        regEditor.commit();
 
         //save the password
         String password = etPassword.getText().toString();
-        mEditor.putString(getString(R.string.pass), password);
-        mEditor.commit();
+        regEditor.putString(getString(R.string.pass), password);
+        regEditor.commit();
 
         //save the address
         String address = etAddress.getText().toString();
-        mEditor.putString(getString(R.string.address), address);
-        mEditor.commit();
+        regEditor.putString(getString(R.string.address), address);
+        regEditor.commit();
 
         //save the phone
         String phone = etPhone.getText().toString();
-        mEditor.putString(getString(R.string.phone), phone);
-        mEditor.commit();
+        regEditor.putString(getString(R.string.phone), phone);
+        regEditor.commit();
 
         //save the childsName
         String childsName = etChildsName.getText().toString();
-        mEditor.putString(getString(R.string.childsName), childsName);
-        mEditor.commit();
+        regEditor.putString(getString(R.string.childsName), childsName);
+        regEditor.commit();
 
         //save the childsGrade
         String childsGrade = etChildsGrade.getText().toString();
-        mEditor.putString(getString(R.string.childsGrade), childsGrade);
-        mEditor.commit();
+        regEditor.putString(getString(R.string.childsGrade), childsGrade);
+        regEditor.commit();
 
         //save the childsSubject
         String childsSubject = etChildSubject.getText().toString();
-        mEditor.putString(getString(R.string.childsSubject), childsSubject);
-        mEditor.commit();
+        regEditor.putString(getString(R.string.childsSubject), childsSubject);
+        regEditor.commit();
 
 
         Intent intent = new Intent(RegistrationActivity.this, ConfirmRegistration.class);
