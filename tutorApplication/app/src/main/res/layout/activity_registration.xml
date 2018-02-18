@@ -28,12 +28,6 @@
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/editText2"
-        style="@style/etReg_style"
-        android:hint="Confirm Password"
-        android:inputType="textPassword" />
-
-    <EditText
         android:id="@+id/etAddress"
         style="@style/etReg_style"
         android:hint="Address"
@@ -63,13 +57,33 @@
         android:hint="Subject"
         android:inputType="textPersonName" />
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.example.jason.tutorapplication.grade_choose"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+    <RadioGroup
+        android:id="@+id/radioGroupPayment"
         android:layout_width="match_parent"
-        android:layout_height="36dp" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cash" />
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Credit" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bitcoin" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/btSubmitRegistration"

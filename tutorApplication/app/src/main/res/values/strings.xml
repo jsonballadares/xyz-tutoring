@@ -3,6 +3,13 @@
     <string name="checkbox">com.example.jason.tutorapplication.checkbox</string>
     <string name="name">com.example.jason.tutorapplication.name</string>
     <string name="password">com.example.jason.tutorapplication.password</string>
+    <string name="email">com.example.jason.tutorapplication.email</string>
+    <string name="pass">com.example.jason.tutorapplication.pass</string>
+    <string name="address">com.example.jason.tutorapplication.address</string>
+    <string name="phone">com.example.jason.tutorapplication.phone</string>
+    <string name="childsName">com.example.jason.tutorapplication.childsName</string>
+    <string name="childsGrade">com.example.jason.tutorapplication.childsGrade</string>
+    <string name="childsSubject">com.example.jason.tutorapplication.childsSubject</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

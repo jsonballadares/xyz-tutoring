@@ -15,13 +15,13 @@ import android.widget.Toast;
 public class LogInScreen extends AppCompatActivity {
 
     //mPreferences will hold user data
-    //mEditor will be used to edit that data
+    //mEditor will be used to edit/access that data
     private SharedPreferences mPreferences;
     private SharedPreferences.Editor mEditor;
 
     //these fields will represent gui elements
     private EditText mName, mPassword;
-    private Button btnLogin,btnRegister;
+    private Button btnLogin;
     private CheckBox mCheckBox;
 
     @Override
@@ -63,6 +63,9 @@ public class LogInScreen extends AppCompatActivity {
                     mEditor.commit();
 
                     Intent intent = new Intent(LogInScreen.this, MainMenu.class);
+                    Bundle data = new Bundle();
+                    data.putString("email",name);
+                    intent.putExtras(data);
                     startActivity(intent);
 
 
@@ -81,7 +84,9 @@ public class LogInScreen extends AppCompatActivity {
      */
     public void buttonLogIn(){
 
+        //set a checkbox when the application starts
         mEditor.putString(getString(R.string.checkbox), "False");
+
         //save the name
         String name = mName.getText().toString();
         mEditor.putString(getString(R.string.name), name);
@@ -94,6 +99,9 @@ public class LogInScreen extends AppCompatActivity {
 
 
         Intent intent = new Intent(LogInScreen.this, MainMenu.class);
+        Bundle data = new Bundle();
+        data.putString("email",name);
+        intent.putExtras(data);
         startActivity(intent);
 
 
@@ -120,6 +128,9 @@ public class LogInScreen extends AppCompatActivity {
 
     }
 
+    /**
+     * Sends user to Registration Activity
+     */
     public void OnClickRegister(View view){
 
         Intent intent = new Intent(LogInScreen.this, RegistrationActivity.class);
