@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class RegistrationActivity extends AppCompatActivity {
@@ -21,6 +23,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText etChildsName;
     private EditText etChildsGrade;
     private EditText etChildSubject;
+    private RadioGroup rg;
+    private RadioButton rbSelected;
 
 
     @Override
@@ -28,6 +32,7 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
+        rg = findViewById(R.id.radioGroupPayment);
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         etAddress = findViewById(R.id.etAddress);
@@ -41,8 +46,17 @@ public class RegistrationActivity extends AppCompatActivity {
 
     }
 
+    public void rbClick(View view){
+
+        int radioButtonID = rg.getCheckedRadioButtonId();
+        rbSelected = findViewById(radioButtonID);
+
+        //todo actually do something with this input
+
+    }
+
     public void onSubmitButtonClick(View view){
-        
+
         //save the name
         String email = etEmail.getText().toString();
         regEditor.putString(getString(R.string.email), email);

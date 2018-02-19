@@ -66,7 +66,7 @@ public class ConfirmRegistration extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 textView.setText(editText.getText());
-                confirmPassword = (String) textView.getText();
+                confirmPassword = textView.getText().toString();
                 regEditor.putString(getString(R.string.pass), confirmPassword);
                 regEditor.commit();
             }

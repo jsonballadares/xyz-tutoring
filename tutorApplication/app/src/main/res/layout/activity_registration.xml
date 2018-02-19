@@ -66,21 +66,24 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/radioButton0"
+            android:id="@+id/rbCash"
+            android:onClick="rbClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Cash" />
 
         <RadioButton
-            android:id="@+id/radioButton1"
+            android:id="@+id/rbCredit"
+            android:onClick="rbClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Credit" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbBitcoin"
+            android:onClick="rbClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

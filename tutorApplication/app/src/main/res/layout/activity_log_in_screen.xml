@@ -11,11 +11,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="244dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="342dp"
+        android:layout_height="276dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
         app:srcCompat="@drawable/logo2" />
 
     <EditText
@@ -23,7 +23,7 @@
         style="@style/editText_style"
         android:layout_gravity="center"
         android:drawableLeft="@drawable/ic_action_person"
-        android:layout_marginTop="15dp"
+
         android:layout_marginBottom="15dp"
         android:hint="Email"
         android:inputType="textEmailAddress" />
