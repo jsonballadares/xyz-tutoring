@@ -213,7 +213,7 @@
             android:clickable="true"
             android:layout_width="340dp"
             android:layout_height="150dp"
-            android:layout_margin="10dp">
+            android:layout_margin="5dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -222,7 +222,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:layout_marginTop="25dp"
+
                     android:background="@drawable/circlebackgroundblack"
                     android:src="@drawable/ic_android_black_24dp"
                     android:padding="10dp"/>
