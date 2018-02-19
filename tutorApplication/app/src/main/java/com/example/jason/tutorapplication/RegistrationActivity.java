@@ -42,9 +42,7 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     public void onSubmitButtonClick(View view){
-
-        //todo add string xml values for this one
-
+        
         //save the name
         String email = etEmail.getText().toString();
         regEditor.putString(getString(R.string.email), email);
@@ -80,7 +78,7 @@ public class RegistrationActivity extends AppCompatActivity {
         regEditor.putString(getString(R.string.childsSubject), childsSubject);
         regEditor.commit();
 
-
+        //start the next activity
         Intent intent = new Intent(RegistrationActivity.this, ConfirmRegistration.class);
         startActivity(intent);
     }

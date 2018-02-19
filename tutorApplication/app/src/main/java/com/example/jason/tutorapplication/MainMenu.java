@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
 
+    //todo maybe use this for more functionality
     private SharedPreferences mPreferences;
     private SharedPreferences.Editor editor;
 
@@ -19,12 +20,13 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+        //gets intent that is sent to it
+        //this is where the data is transfered
         Intent intentData = getIntent();
         String email = intentData.getStringExtra("email");
 
-        //mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        //editor = mPreferences.edit();
 
+        //toasts the user
         Toast toast = Toast.makeText(MainMenu.this,"Welcome " + email , Toast.LENGTH_SHORT);
         toast.show();
 

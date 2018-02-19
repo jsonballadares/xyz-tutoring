@@ -48,30 +48,38 @@ public class LogInScreen extends AppCompatActivity {
                 //save the checkbox preference
                 if(mCheckBox.isChecked()){
 
-                    //set a checkbox when the application starts
-                    mEditor.putString(getString(R.string.checkbox), "True");
-                    mEditor.commit();
+                    String empty = "";
 
-                    //save the name
-                    String name = mName.getText().toString();
-                    mEditor.putString(getString(R.string.name), name);
-                    mEditor.commit();
+                    if(!mName.getText().toString().equals(empty) && !mPassword.getText().toString().equals(empty)){
+                        //set a checkbox when the application starts
+                        mEditor.putString(getString(R.string.checkbox), "True");
+                        mEditor.commit();
 
-                    //save the password
-                    String password = mPassword.getText().toString();
-                    mEditor.putString(getString(R.string.password), password);
-                    mEditor.commit();
+                        //save the name
+                        String name = mName.getText().toString();
+                        mEditor.putString(getString(R.string.name), name);
+                        mEditor.commit();
 
-                    Intent intent = new Intent(LogInScreen.this, MainMenu.class);
-                    Bundle data = new Bundle();
-                    data.putString("email",name);
-                    intent.putExtras(data);
-                    startActivity(intent);
+                        //save the password
+                        String password = mPassword.getText().toString();
+                        mEditor.putString(getString(R.string.password), password);
+                        mEditor.commit();
+
+                        //sends intent to data to getIntent() of the activity
+                        Intent intent = new Intent(LogInScreen.this, MainMenu.class);
+                        Bundle data = new Bundle();
+                        data.putString("email",name);
+                        intent.putExtras(data);
+                        startActivity(intent);
+                    }else {
+                        buttonLogIn();
+                    }
+
+
 
 
                 }else{
                     buttonLogIn();
-
                 }
             }
         });
@@ -83,28 +91,35 @@ public class LogInScreen extends AppCompatActivity {
      * the user logs in without using the checkbox
      */
     public void buttonLogIn(){
+        String empty = "";
 
-        //set a checkbox when the application starts
-        mEditor.putString(getString(R.string.checkbox), "False");
+        if(!mName.getText().toString().equals(empty) && !mPassword.getText().toString().equals(empty)){
+            //set a checkbox when the application starts
+            mEditor.putString(getString(R.string.checkbox), "False");
 
-        //save the name
-        String name = mName.getText().toString();
-        mEditor.putString(getString(R.string.name), name);
-        mEditor.commit();
+            //save the name
+            String name = mName.getText().toString();
+            mEditor.putString(getString(R.string.name), name);
+            mEditor.commit();
 
-        //save the password
-        String password = mPassword.getText().toString();
-        mEditor.putString(getString(R.string.password), password);
-        mEditor.commit();
+            //save the password
+            String password = mPassword.getText().toString();
+            mEditor.putString(getString(R.string.password), password);
+            mEditor.commit();
 
+            //start the next activity along with sending it the name through an intent
+            Intent intent = new Intent(LogInScreen.this, MainMenu.class);
+            Bundle data = new Bundle();
+            data.putString("email",name);
+            intent.putExtras(data);
+            startActivity(intent);
 
-        Intent intent = new Intent(LogInScreen.this, MainMenu.class);
-        Bundle data = new Bundle();
-        data.putString("email",name);
-        intent.putExtras(data);
-        startActivity(intent);
+        }else {
 
+            Toast toast = Toast.makeText(this,"YOU SHALL NOT PASS", Toast.LENGTH_SHORT);
+            toast.show();
 
+        }
     }
 
     /**
@@ -114,7 +129,6 @@ public class LogInScreen extends AppCompatActivity {
         String checkbox = mPreferences.getString(getString(R.string.checkbox), "False");
         String name = mPreferences.getString(getString(R.string.name), "");
         String password = mPreferences.getString(getString(R.string.password), "");
-
 
         if(checkbox.equals("True")){
             mCheckBox.setChecked(true);
@@ -136,7 +150,5 @@ public class LogInScreen extends AppCompatActivity {
         Intent intent = new Intent(LogInScreen.this, RegistrationActivity.class);
         startActivity(intent);
 
-
     }
-
 }
