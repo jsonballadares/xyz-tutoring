@@ -3,6 +3,7 @@ package com.example.jason.tutorapplication;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.widget.Toast;
 
 /**
@@ -13,5 +14,7 @@ public class BroadCastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Toast.makeText(context,"FEED M3 M0AR P0WER PL0X", Toast.LENGTH_SHORT ).show();
+        final MediaPlayer yeet = MediaPlayer.create(context,R.raw.yeet);
+        yeet.start();
     }
 }

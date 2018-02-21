@@ -3,6 +3,7 @@ package com.example.jason.tutorapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -113,6 +114,7 @@ public class LogInScreen extends AppCompatActivity {
         }else {
 
             Toast toast = Toast.makeText(this,"YOU SHALL NOT PASS", Toast.LENGTH_SHORT);
+            youShallNotPass();
             toast.show();
 
         }
@@ -147,4 +149,16 @@ public class LogInScreen extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    /**
+     * You shall not pass audio
+     */
+
+    public void youShallNotPass(){
+
+        final MediaPlayer gandalf = MediaPlayer.create(this,R.raw.gandalf);
+        gandalf.start();
+
+    }
+
 }
