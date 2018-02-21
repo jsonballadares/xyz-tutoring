@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.BATTERY_STATS" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,21 +14,26 @@
         <activity android:name=".LogInScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".MainMenu" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".ConfirmRegistration"></activity>
+        <activity android:name=".ConfirmRegistration" />
 
         <receiver android:name=".BroadCastReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
-                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
             </intent-filter>
         </receiver>
 
+        <activity android:name=".ScheduleActivity" />
+        <activity android:name=".ClassActivity" />
+        <activity android:name=".VideoActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ExerciseActivity"></activity>
     </application>
 
 </manifest>

@@ -74,10 +74,6 @@ public class LogInScreen extends AppCompatActivity {
                     }else {
                         buttonLogIn();
                     }
-
-
-
-
                 }else{
                     buttonLogIn();
                 }
